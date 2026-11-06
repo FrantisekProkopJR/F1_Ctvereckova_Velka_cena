@@ -26,3 +26,15 @@ Digitální adaptace legendární papírové hry **Vektorové závody (Racetrack
 1. Naklonujte repozitář:
    ```bash
    git clone [https://github.com/FrantisekProkopJR/F1_Ctvereckova_Velka_cena.git](https://github.com/FrantisekProkopJR/F1_Ctvereckova_Velka_cena.git)
+2.Otevřete projekt v libovolném IDE (např. IntelliJ IDEA).
+3.Spusťte třídu F1Main.java nebo použijte Maven:
+./mvnw clean javafx:run
+
+---
+
+### Jak to uložit:
+1. Vlož výše uvedený text do editoru na obrazovce[cite: 17].
+2. Vpravo nahoře klikni na zelené tlačítko **Commit changes...**[cite: 17].
+3. Ve vyskakovacím okně klikni na zelené **Commit changes** pro potvrzení.
+
+Po uložení bude tvůj profil a repozitář na GitHubu vypadat jako hotový profesionální produkt[cite: 16, 17].
