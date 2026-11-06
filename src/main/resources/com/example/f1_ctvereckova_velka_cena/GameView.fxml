@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.layout.Pane?>
+
+<!-- Hlavní rámeček okna pro samotný závod -->
+<!-- fx:controller to propojuje s mozkem hry (GameController.java) -->
+<!-- focusTraversable="true" je obrovsky důležité: díky tomu okno poslouchá tvoji klávesnici! -->
+<Pane fx:id="gamePane" style="-fx-background-color: #e74c3c;"
+      focusTraversable="true"
+      xmlns="http://javafx.com/javafx/17.0.2-ea"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.f1_ctvereckova_velka_cena.GameController">
+
+    <!-- Malířské plátno. Nemá v sobě žádná tlačítka, je to prostě jen prázdná plocha. -->
+    <!-- Přesně sem pak kód vykresluje trávu, asfalt, panely s časem a samotné formule. -->
+    <Canvas fx:id="gameCanvas" width="800" height="600" layoutX="0" layoutY="0" />
+
+</Pane>

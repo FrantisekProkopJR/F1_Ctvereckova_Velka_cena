@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<!-- Hlavní svislá krabice (VBox), ve které je všechno naskládané pod sebou -->
+<!-- fx:controller říká, který Java kód (mozek) tuto nakreslenou obrazovku ovládá -->
+<VBox fx:id="mainPane" alignment="CENTER" spacing="40.0" style="-fx-background-color: #000000;"
+      focusTraversable="true"
+      xmlns:fx="http://javafx.com/fxml/1"
+      xmlns="http://javafx.com/javafx/17.0.2-ea"
+      fx:controller="com.example.f1_ctvereckova_velka_cena.CarSelectionController">
+
+    <!-- Velký bílý nadpis nahoře na obrazovce -->
+    <Label text="VÝBĚR MONOPOSTŮ" textFill="WHITE">
+        <font>
+            <Font name="Formula1-Bold" size="34.0" />
+        </font>
+    </Label>
+
+    <!-- Vodorovná krabice (HBox). Věci uvnitř se skládají zleva doprava (vedle sebe) -->
+    <HBox alignment="CENTER" spacing="30.0">
+
+        <!-- Bílá zakulacená kartička pro Hráče 1 -->
+        <VBox fx:id="player1Box" alignment="CENTER" spacing="15.0" style="-fx-background-color: #ffffff; -fx-padding: 25; -fx-background-radius: 10;">
+            <Label fx:id="p1NameLabel" text="Hráč 1" textFill="#e74c3c">
+                <font><Font name="Formula1-Bold" size="20.0" /></font>
+            </Label>
+            <Label fx:id="p1CarLabel" text="Auto">
+                <font><Font name="Formula1-Bold" size="26.0" /></font>
+            </Label>
+            <Label fx:id="p1ControlsLabel" text="Ovládání" textFill="#bdc3c7" />
+        </VBox>
+
+        <!-- Bílá zakulacená kartička pro Hráče 2 -->
+        <VBox fx:id="player2Box" alignment="CENTER" spacing="15.0" style="-fx-background-color: #ffffff; -fx-padding: 25; -fx-background-radius: 10;">
+            <Label fx:id="p2NameLabel" text="Hráč 2" textFill="#e74c3c">
+                <font><Font name="Formula1-Bold" size="20.0" /></font>
+            </Label>
+            <Label fx:id="p2CarLabel" text="Auto">
+                <font><Font name="Formula1-Bold" size="26.0" /></font>
+            </Label>
+            <Label fx:id="p2ControlsLabel" text="Ovládání" textFill="#bdc3c7" />
+        </VBox>
+
+        <!-- Bílá zakulacená kartička pro Hráče 3 -->
+        <VBox fx:id="player3Box" alignment="CENTER" spacing="15.0" style="-fx-background-color: #ffffff; -fx-padding: 25; -fx-background-radius: 10;">
+            <Label fx:id="p3NameLabel" text="Hráč 3" textFill="#e74c3c">
+                <font><Font name="Formula1-Bold" size="20.0" /></font>
+            </Label>
+            <Label fx:id="p3CarLabel" text="Auto">
+                <font><Font name="Formula1-Bold" size="26.0" /></font>
+            </Label>
+            <Label fx:id="p3ControlsLabel" text="Ovládání" textFill="#bdc3c7" />
+        </VBox>
+
+    </HBox>
+
+    <!-- Startovní tlačítko -->
+    <!-- focusTraversable="false" je tu schválně! Zabrání tomu, aby si počítač myslel,
+         že šipkami chceme vybírat tlačítko místo aut. Tlačítko prostě ignoruje klávesnici. -->
+    <Button focusTraversable="false" onAction="#onStartWeekendClick"
+            style="-fx-font-size: 18px; -fx-min-width: 240px; -fx-padding: 12px; -fx-background-color: #e74c3c; -fx-text-fill: white; -fx-font-weight: bold;"
+            text="Potvrdit a vstoupit na trať" />
+</VBox>

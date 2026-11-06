@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<!-- Hlavní svislá krabice (věci budou pod sebou), černé pozadí -->
+<!-- Říkáme, že klikání tady bude řešit MenuController -->
+<VBox alignment="CENTER" spacing="25.0" style="-fx-background-color: #000000;"
+      xmlns:fx="http://javafx.com/fxml/1"
+      xmlns="http://javafx.com/javafx/17.0.2-ea"
+      fx:controller="com.example.f1_ctvereckova_velka_cena.MenuController">
+
+    <!-- Vnitřní okraje, aby to nebylo nalepené úplně na stěnách okna -->
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+
+    <!-- Hlavní velký nadpis hry -->
+    <Label text="ČTVEREČKOVÁ F1" textFill="WHITE">
+        <font>
+            <Font name="Formula1-Bold" size="38.0" />
+        </font>
+    </Label>
+
+    <!-- Menší nápověda pro uživatele -->
+    <Label text="Vyberte počet hráčů" textFill="#bdc3c7">
+        <font>
+            <Font name="Formula1-Regular" size="18.0" />
+        </font>
+    </Label>
+
+    <!-- Tlačítka pro výběr počtu hráčů -->
+    <!-- onAction = "když na mě klikneš, zavolej v MenuControlleru tuhle funkci" -->
+    <Button onAction="#onOnePlayerClick" style="-fx-font-size: 18px; -fx-min-width: 220px; -fx-padding: 12px; -fx-background-color: #e74c3c; -fx-text-fill: white; -fx-font-weight: bold;" text="1 Hráč" />
+    <Button onAction="#onTwoPlayersClick" style="-fx-font-size: 18px; -fx-min-width: 220px; -fx-padding: 12px; -fx-background-color: #e74c3c; -fx-text-fill: white; -fx-font-weight: bold;" text="2 Hráči" />
+    <Button onAction="#onThreePlayersClick" style="-fx-font-size: 18px; -fx-min-width: 220px; -fx-padding: 12px; -fx-background-color: #e74c3c; -fx-text-fill: white; -fx-font-weight: bold;" text="3 Hráči" />
+
+</VBox>

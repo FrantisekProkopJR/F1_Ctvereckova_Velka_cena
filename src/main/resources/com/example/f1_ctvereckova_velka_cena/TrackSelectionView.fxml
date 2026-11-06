@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<!-- Hlavní svislá krabice pro výběr tratí, černé pozadí -->
+<VBox alignment="CENTER" spacing="25.0" style="-fx-background-color: #000000;"
+      xmlns="http://javafx.com/javafx/17.0.2-ea"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.f1_ctvereckova_velka_cena.TrackSelectionController">
+
+    <!-- Hlavní nadpis -->
+    <Label text="VÝBĚR TRATÍ (3 ZÁVODY)" textFill="WHITE">
+        <font>
+            <Font name="Formula1-Bold" size="30.0" />
+        </font>
+    </Label>
+
+    <!-- Nápis, který ukazuje, kdo je zrovna na řadě -->
+    <Label fx:id="turnInfoLabel" text="Vybírá Hráč 1..." textFill="#e74c3c">
+        <font>
+            <Font name="Formula1-Bold" size="18.0" />
+        </font>
+    </Label>
+
+    <!-- Mřížka 3x3 (TilePane), do které kód automaticky naskládá 9 tlačítek s tratěmi -->
+    <TilePane fx:id="tracksPane" alignment="CENTER" hgap="20.0" vgap="20.0" prefColumns="3" maxWidth="680" />
+
+</VBox>
